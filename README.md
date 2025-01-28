@@ -15,6 +15,12 @@ This project is a simple timer extension for Google Chrome. It allows users to s
   ```bash
   git clone https://github.com/yourusername/chrome-timer-ext.git
   ```
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" by clicking the toggle switch in the top right corner.
-4. Click the "Load unpacked" button and select the cloned repository folder.
+2. Run the yarn to install and build the app
+  ```bash
+    yarn && yarn build
+  ```
+3. It will create the chrome extension in `/dist` folder
+4. Open Chrome and navigate to `chrome://extensions/`.
+5. Enable "Developer mode" by clicking the toggle switch in the top right corner.
+6. Click the "Load unpacked" button and select the `/dist` from the repo
+
