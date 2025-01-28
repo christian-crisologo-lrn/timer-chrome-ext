@@ -21,21 +21,22 @@ Visit this GH page to see the running [demo](https://christian-crisologo-lrn.git
   ```bash
   git clone https://github.com/yourusername/chrome-timer-ext.git
   ```
-2. Run the yarn to install and build the app
+
+2. Run the yarn to install and build the app and create the `/dist` folder
   ```bash
     yarn install && yarn build
   ```
-   It will create the chrome extension in `/dist` folder.
-3. Open Chrome and navigate to `chrome://extensions/`.
-4. Enable "Developer mode" by clicking the toggle switch in the top right corner.
-5. Click the "Load unpacked" button and select the `/dist` from the repo
+
+3. To use it as a chrome extension. Open your Chrome and navigate to `chrome://extensions/`
+4. Enable `"Developer mode"` by clicking the toggle switch in the top right corner
+5. Click the `"Load unpacked"` button and select the `/dist` from your repo
+6. Find the chrome extension in your extensions app named `"Mewtwo Tiemr"`
+7. Launch the App and it will show in a seperate popup
 
 ### Running in dev
 1. After cloning the repo, run the yarn to launch the `dev` environment
   ```
   yarn install && yarn dev
   ```
-2. Hit your [localhost](http://localhost:5173/timer-chrome-ext/) 
-
-
+2. Hit your [localhost](http://localhost:5173/timer-chrome-ext/)
 
