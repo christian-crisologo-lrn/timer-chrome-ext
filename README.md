@@ -7,7 +7,6 @@ This project is a simple timer extension for Google Chrome. It allows users to s
 
 - Set a countdown timer
 - Simple and intuitive user interface
-- Works offline
 
 ## Installation
 
