@@ -1,0 +1,49 @@
+/* Define CSS variables for default theme */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --warning-color: yellow;
+  --shake-color: red;
+  --button-bg-color: #43e836;
+  --button-text-color: black;
+}
+
+/* Define CSS variables for dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+      --background-color: #121212;
+      --text-color: white;
+      --button-text-color: white;
+  }
+}
+
+body.dark-theme {
+  --background-color: #121212;
+  --text-color: white;
+  --button-text-color: white;
+}
+
+body.light-theme {
+  --background-color: white;
+  --text-color: black;
+  --button-text-color: black;
+}
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 100% !important;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
