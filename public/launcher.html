@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Timer Popup</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .open-popup-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="open-popup-btn" onclick="openPopup()">Open Timer Popup</button>
+
+    <script>
+      function openPopup() {
+        window.open('index.html', 'popup', 'width=150,height=260');
+      }
+    </script>
+  </body>
+</html>
