@@ -8,7 +8,7 @@ chrome.action.onClicked.addListener((tab) => {
 
     // Create the floating window with the timer
     chrome.windows.create({
-      url: "https://christian-crisologo-lrn.github.io/timer-chrome-ext/index.html",  // The page to display inside the floating window
+      url: "ext.html",  // The page to display inside the floating window
       type: "popup",      // Type set to 'popup' for a small, non-tab window
       width: 150,         // Window width
       height: 260,        // Window height
