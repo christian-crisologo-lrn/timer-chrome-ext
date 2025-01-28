@@ -6,12 +6,16 @@
     <title>Timer launcher</title>
     <style>
       body {
+        width: 100%;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 100%;
+        margin: 100px 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
       }
       .open-popup-btn {
         padding: 10px 20px;
@@ -21,11 +25,17 @@
     </style>
   </head>
   <body>
-    <button class="open-popup-btn" onclick="openPopup()">Open Timer Popup</button>
+    <div class="container">
+      <button class="open-popup-btn" onclick="openPopup()">Open Timer Popup</button>
+    </div>
 
     <script>
       function openPopup() {
-        window.open('index.html', 'popup', 'width=150,height=260,toolbar=no,location=no,status=no,menubar=no');
+        const width = 150;
+        const height = 240;
+        const left = window.screen.width - width;
+        const top = 0;
+        window.open('index.html', 'popup', `width=${width},height=${height},top=${top},left=${left},toolbar=no,location=no,status=no,menubar=no,scrollbars=no`);
       }
     </script>
   </body>
