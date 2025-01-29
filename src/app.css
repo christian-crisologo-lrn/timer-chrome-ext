@@ -81,6 +81,39 @@
 
 }
 
+@media (min-width: 401px) {
+    .timer-display .expert {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 300px) {
+    .timer-display .expert .hh,
+    .timer-display .expert .mm,
+    .timer-display .expert .ss,
+    .timer-display .expert .colon {
+        font-size: 10.5em;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .timer-display .expert .hh,
+    .timer-display .expert .mm,
+    .timer-display .expert .ss,
+    .timer-display .expert .colon {
+        font-size: 15.5em;
+    }
+}
+
+@media (min-width: 1201px) {
+    .timer-display .expert .hh,
+    .timer-display .expert .mm,
+    .timer-display .expert .ss,
+    .timer-display .expert .colon {
+        font-size: 20.5em;
+    }
+}
+
 /* ## Timer controls  */
 
 .timer-controls, .timer-display, .input-container, .buttons-container {
