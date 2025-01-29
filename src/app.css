@@ -24,10 +24,6 @@
     opacity: 0.5;
 }
 
-.timer-display .row {
-    display: flex;
-}
-
 .timer-display .expert {
     font-weight: bold;
     flex-direction: column;
@@ -50,40 +46,44 @@
 .timer-display .expert .ss,
 .timer-display .expert .colon
 {
-    cursor: default;
     font-size: 6.5em;
-    line-height: .8em;
-    text-align: left;
+    line-height: 1em;
 }
 .timer-display .expert .colon
  {
     font-size: 4.8em;
     margin-left: -16px;
-    color: var(--text-color)
+}
+
+.timer-display .expert {
+    color: var(--text-expert-color);
 }
 
 .timer-display .expert .hh {
-    color: #ff9900;
-    opacity: 1;
+    opacity: .9;
 }
 .timer-display .expert .mm {
-    color: #ff9900;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 .timer-display .expert .ss {
-    color: #ff9900;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
-.timer-display .expert-mode .row {
-    display: flex;
-    justify-content: space-between;
 
+.timer-display .expert {
+    position: relative;
+}
+.timer-display .expert:hover .overlay,
+.timer-display .expert:active .overlay {
+    opacity: 1;
 }
 
 @media (min-width: 401px) {
     .timer-display .expert {
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
 }
 
@@ -94,6 +94,10 @@
     .timer-display .expert .colon {
         font-size: 10.5em;
     }
+    .timer-display .edit{
+        font-size: 2em;
+        line-height: 1em;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
@@ -103,6 +107,9 @@
     .timer-display .expert .colon {
         font-size: 15.5em;
     }
+    .timer-display .edit{
+        font-size: 4.5em;
+    }
 }
 
 @media (min-width: 1201px) {
@@ -111,6 +118,9 @@
     .timer-display .expert .ss,
     .timer-display .expert .colon {
         font-size: 20.5em;
+    }
+    .timer-display .edit{
+        font-size: 5em;
     }
 }
 
@@ -134,11 +144,7 @@
     margin-bottom: 5px;
 }
 
-.input-container .row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2px;
-}
+
 .input-container .row .input-label,
 .input-container .row  input[type="number"],
 .input-container .row .theme-btn {
@@ -161,12 +167,6 @@
     font-size: 1em;
     text-align: center;
     padding: 6px 0;
-}
-button.mode-btn {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .buttons-container {

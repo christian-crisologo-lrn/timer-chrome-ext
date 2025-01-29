@@ -7,7 +7,8 @@ import {
     DEFAULT_MINUTE,
     DEFAULT_WARNING_TIME,
     STATE,
-    MODE
+    MODE,
+    DEFAULT_INTERVAL
 } from '../constants';
 import { convertMinutesToTime, numToString } from '../helper';
 
@@ -45,7 +46,7 @@ const Timer = () => {
 
             return newTime;
         });
-        }, 1000);
+        }, DEFAULT_INTERVAL);
     }
 
     return () => clearInterval(timeInterval.current);

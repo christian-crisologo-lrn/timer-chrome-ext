@@ -11,7 +11,7 @@ export const {
     DEFAULT_SECOND: 0,
     DEFAULT_WARNING_TIME: 7,
     DEFAULT_INTERVAL: 1000,
-    DEFAULT_RESET_DELAY: 4000,
+    DEFAULT_RESET_DELAY: 2500,
     STATE: {
         START: 'Start',
         PLAY: 'Play',

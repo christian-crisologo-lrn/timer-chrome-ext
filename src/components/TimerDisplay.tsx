@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cls from 'classnames';
 import { MODE } from '../constants';
 
@@ -7,16 +7,14 @@ type TimeProps = { mm: string; ss: string; hh: string };
 interface TimerDisplayProps {
     time: TimeProps;
     disabled?: boolean;
-    isActive: boolean;
+    isActive?: boolean;
     mode: string;
     onStartToggle?: () => void;
 }
 
-interface TimeDisplayModeProps {
+interface TimeDisplayModeProps extends Omit<TimerDisplayProps, 'mode'> {
     showHour: boolean;
     colonClassName: string;
-    time: TimeProps;
-    onStartToggle?: () => void;
 }
 
 const EditMode: React.FC<TimeDisplayModeProps> = (props) => {
@@ -38,10 +36,20 @@ const EditMode: React.FC<TimeDisplayModeProps> = (props) => {
 }
 
 const ExpertMode: React.FC<TimeDisplayModeProps> = (props) => {
-    const { showHour, colonClassName, time, onStartToggle} = props;
+    const { showHour, colonClassName, time, isActive, onStartToggle} = props;
+    const [isOverlayVisible, setOverlayVisible] = useState(false);
+
+    const handleMouseEnter = () => setOverlayVisible(true);
+    const handleMouseLeave = () => setOverlayVisible(false);
 
     return (
-        <div className='expert' onClick={onStartToggle} >
+        <div className='expert'
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => {
+                setOverlayVisible(false);
+                onStartToggle!();
+            }}>
             {
                  showHour && <div className="row">
                     <span className='hh'>{time.hh}</span>
@@ -55,6 +63,15 @@ const ExpertMode: React.FC<TimeDisplayModeProps> = (props) => {
             <div className='row'>
                 <span className='ss'>{time.ss}</span>
             </div>
+            {isOverlayVisible && (
+                <div className="overlay">
+                    <span className="overlay-message">
+                        {
+                            isActive ? 'Press to pause' : 'Press to start'
+                        }
+                    </span>
+                </div>
+            )}
         </div>
     )
 }
@@ -65,8 +82,10 @@ const TimerDisplay: React.FC<TimerDisplayProps> = (props) => {
     const containerClassName = cls('timer-display', { disabled });
     const colonClassName = cls('colon', { blink: isActive });
 
+
+
     return (
-        <div className={containerClassName}>
+        <div className={containerClassName} >
             {
                 mode === MODE.EXPERT ?
                     <ExpertMode
@@ -74,6 +93,7 @@ const TimerDisplay: React.FC<TimerDisplayProps> = (props) => {
                         showHour={showHour}
                         colonClassName={colonClassName}
                         time={time} 
+                        isActive={isActive}
                     /> : 
                     <EditMode
                         showHour={showHour}
