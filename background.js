@@ -11,7 +11,7 @@ chrome.action.onClicked.addListener((tab) => {
       url: "https://christian-crisologo-lrn.github.io/timer-chrome-ext/index.html",  // The page to display inside the floating window
       type: "popup",      // Type set to 'popup' for a small, non-tab window
       width: 150,         // Window width
-      height: 260,        // Window height
+      height: 265,        // Window height
       focused: true,      // Focus the window when it opens
       left: 0,  // Position it to the right of the screen
       top: 0, // Position it to the bottom of the screen
