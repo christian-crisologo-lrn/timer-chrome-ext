@@ -24,7 +24,7 @@
     opacity: 0.5;
 }
 
-.timer-display .expert {
+.timer-display .display {
     font-weight: bold;
     flex-direction: column;
     display: flex;
@@ -41,45 +41,45 @@
     text-align: left;
 }
 
-.timer-display .expert .hh,
-.timer-display .expert .mm,
-.timer-display .expert .ss,
-.timer-display .expert .colon
+.timer-display .display .hh,
+.timer-display .display .mm,
+.timer-display .display .ss,
+.timer-display .display .colon
 {
     font-size: 6.5em;
-    line-height: 1em;
+    line-height: .8em;
 }
-.timer-display .expert .colon
+.timer-display .display .colon
  {
     font-size: 4.8em;
     margin-left: -16px;
 }
 
-.timer-display .expert {
-    color: var(--text-expert-color);
+.timer-display .display {
+    color: var(--text-display-color);
 }
 
-.timer-display .expert .hh {
+.timer-display .display .hh {
     opacity: .9;
 }
-.timer-display .expert .mm {
+.timer-display .display .mm {
     opacity: 0.6;
 }
-.timer-display .expert .ss {
+.timer-display .display .ss {
     opacity: 0.4;
 }
 
 
-.timer-display .expert {
+.timer-display .display {
     position: relative;
 }
-.timer-display .expert:hover .overlay,
-.timer-display .expert:active .overlay {
+.timer-display .display:hover .overlay,
+.timer-display .display:active .overlay {
     opacity: 1;
 }
 
 @media (min-width: 401px) {
-    .timer-display .expert {
+    .timer-display .display {
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -88,10 +88,10 @@
 }
 
 @media (min-width: 300px) {
-    .timer-display .expert .hh,
-    .timer-display .expert .mm,
-    .timer-display .expert .ss,
-    .timer-display .expert .colon {
+    .timer-display .display .hh,
+    .timer-display .display .mm,
+    .timer-display .display .ss,
+    .timer-display .display .colon {
         font-size: 10.5em;
     }
     .timer-display .edit{
@@ -101,10 +101,10 @@
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
-    .timer-display .expert .hh,
-    .timer-display .expert .mm,
-    .timer-display .expert .ss,
-    .timer-display .expert .colon {
+    .timer-display .display .hh,
+    .timer-display .display .mm,
+    .timer-display .display .ss,
+    .timer-display .display .colon {
         font-size: 15.5em;
     }
     .timer-display .edit{
@@ -113,10 +113,10 @@
 }
 
 @media (min-width: 1201px) {
-    .timer-display .expert .hh,
-    .timer-display .expert .mm,
-    .timer-display .expert .ss,
-    .timer-display .expert .colon {
+    .timer-display .display .hh,
+    .timer-display .display .mm,
+    .timer-display .display .ss,
+    .timer-display .display .colon {
         font-size: 20.5em;
     }
     .timer-display .edit{

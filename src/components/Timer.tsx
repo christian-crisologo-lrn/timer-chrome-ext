@@ -28,7 +28,7 @@ const Timer = () => {
     const [remainingTime, setRemainingTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
     const [isExpired, setIsExpired] = useState(false);
-    const [mode, setMode] = useState('edit');
+    const [mode, setMode] = useState(MODE.DISPLAY);
     const [timerState, setTimerState] = useState(STATE.START);
     const timeInterval = useRef<ReturnType<typeof setInterval>>();
 
@@ -123,7 +123,7 @@ const Timer = () => {
                 timerState={timerState}
                 onStartToggle={toggleStartStopTimer}
                 onReset={resetTimer}
-                onToggleMode={() => setMode(prev => prev === MODE.EDIT ? MODE.EXPERT : MODE.EDIT)}
+                onToggleMode={() => setMode(prev => prev === MODE.EDIT ? MODE.DISPLAY : MODE.EDIT)}
                 mode={mode}
                 disabled={isExpired}
             />

@@ -86,7 +86,7 @@ const TimerControls: React.FC<ControlsProps> = (props) => {
             <button className="mode-btn" onClick={onToggleMode}>
                 {mode === 'edit' ? 'Display' : '< Edit'}
             </button>
-            {mode === MODE.EXPERT && (<button 
+            {mode === MODE.DISPLAY && (<button 
                                         onClick={onReset} 
                                         className='reset' 
                                         disabled={disabled} 

@@ -35,7 +35,7 @@ const EditMode: React.FC<TimeDisplayModeProps> = (props) => {
     )
 }
 
-const ExpertMode: React.FC<TimeDisplayModeProps> = (props) => {
+const DisplayMode: React.FC<TimeDisplayModeProps> = (props) => {
     const { showHour, colonClassName, time, isActive, onStartToggle} = props;
     const [isOverlayVisible, setOverlayVisible] = useState(false);
 
@@ -43,7 +43,7 @@ const ExpertMode: React.FC<TimeDisplayModeProps> = (props) => {
     const handleMouseLeave = () => setOverlayVisible(false);
 
     return (
-        <div className='expert'
+        <div className='display'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => {
@@ -87,8 +87,8 @@ const TimerDisplay: React.FC<TimerDisplayProps> = (props) => {
     return (
         <div className={containerClassName} >
             {
-                mode === MODE.EXPERT ?
-                    <ExpertMode
+                mode === MODE.DISPLAY ?
+                    <DisplayMode
                         onStartToggle={onStartToggle}
                         showHour={showHour}
                         colonClassName={colonClassName}

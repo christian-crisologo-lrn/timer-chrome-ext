@@ -7,9 +7,9 @@ export const {
     STATE,
     MODE
 } = {
-    DEFAULT_MINUTE: 2,
+    DEFAULT_MINUTE: 1.5,
     DEFAULT_SECOND: 0,
-    DEFAULT_WARNING_TIME: 7,
+    DEFAULT_WARNING_TIME: 5,
     DEFAULT_INTERVAL: 1000,
     DEFAULT_RESET_DELAY: 2500,
     STATE: {
@@ -20,6 +20,6 @@ export const {
     },
     MODE: {
         EDIT: 'edit',
-        EXPERT: 'expert',
+        DISPLAY: 'display',
     },
 }
